@@ -18,12 +18,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QPoint mouse_pos;
 
 protected:
-    void mouseMoveEvent(QMouseEvent *event);
-
-    void paintEvent(QPaintEvent *event);
 };
 
 #endif // MAINWINDOW_H
