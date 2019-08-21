@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QPaintEvent>
+#include <QTcpServer>
+#include <QTcpSocket>
 
 namespace Ui {
 class MainWindow;
@@ -18,8 +19,13 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QTcpServer* server;
+    QTcpSocket* socket;
+    QByteArray array;
 
-protected:
+public slots:
+    void readImage();
+
 };
 
 #endif // MAINWINDOW_H
